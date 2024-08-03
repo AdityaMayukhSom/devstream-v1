@@ -1,4 +1,4 @@
-import MandelbrotCompute from "@/classes/mandelbrot_compute";
+import MandelbrotCompute from "@/lib/mandelbrot_compute";
 import type { MandelbrotWorkerInjectPayload, MandelbrotWorkerReturnPayload } from "@/workers/payloads";
 
 const ctx: Worker = self as unknown as Worker;
