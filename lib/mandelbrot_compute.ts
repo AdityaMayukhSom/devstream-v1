@@ -1,4 +1,4 @@
-import Complex from "@classes/complex";
+import Complex from "@lib/complex";
 
 class MandelbrotCompute {
     private static readonly MAX_ITERATION = 40;

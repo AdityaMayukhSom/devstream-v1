@@ -1,7 +1,7 @@
 "use strict";
 
+import Colors from "@lib/colors";
 import type { MandelbrotWorkerInjectPayload, MandelbrotWorkerReturnPayload } from "@workers/payloads";
-import Colors from "@classes/colors";
 
 class MandelbrotRenderer {
     private static readonly PIXEL_SKIP_SIZE = 5;
