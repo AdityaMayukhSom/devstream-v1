@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Dimention from "@classes/dimention";
+import Dimention from "@lib/dimention";
 
 const useWindowDimention = () => {
     const [dimention, setDimention] = useState(new Dimention(0, 0));

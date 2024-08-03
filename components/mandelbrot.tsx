@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef } from "react";
-import Dimention from "@classes/dimention";
-import MandelbrotRenderer from "@/classes/mandelbrot_renderer";
+import Dimention from "@lib/dimention";
+import MandelbrotRenderer from "@lib/mandelbrot_renderer";
 
 const MandelbrotComponent = (props: { dimention: Dimention }) => {
     const mandelbrotCanvasRef = useRef<HTMLCanvasElement>(null);

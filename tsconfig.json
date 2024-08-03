@@ -19,9 +19,10 @@
         ],
         "paths": {
             "@/*": ["./*"],
+            "@styles/*": ["./styles/*"],
             "@custom-hooks": ["./hooks"],
             "@workers/*": ["./workers/*"],
-            "@classes/*": ["./classes/*"],
+            "@lib/*": ["./lib/*"],
             "@components/*": ["./components/*"]
         }
     },
