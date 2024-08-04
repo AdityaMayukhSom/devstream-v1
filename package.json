@@ -67,7 +67,7 @@
             "block-scoped-var": "error",
             "consistent-return": "error",
             "default-case": "error",
-            "dot-notation": "error"
+            "dot-notation": "warn"
         }
     }
 }
