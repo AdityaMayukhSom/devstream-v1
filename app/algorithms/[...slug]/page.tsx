@@ -5,6 +5,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 
+import remarkGfm from "remark-gfm";
+import rehypeSanitize from "rehype-sanitize";
 import rehypeHighlight from "rehype-highlight";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
@@ -56,8 +58,8 @@ export default async function AlgorithmsPage({ params }: { params: { slug: strin
         source,
         options: {
             mdxOptions: {
-                remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-                rehypePlugins: [rehypeHighlight, rehypeHighlightCodeLines],
+                remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
+                rehypePlugins: [rehypeSanitize, rehypeHighlight, rehypeHighlightCodeLines],
             },
             parseFrontmatter: true,
         },
@@ -65,7 +67,7 @@ export default async function AlgorithmsPage({ params }: { params: { slug: strin
     });
 
     return (
-        <article className="pt-36 pb-32 w-full px-4 sm:px-8 md:px-16 lg:px-32 xl:px-44 max-w-[1200px] leading-6 selection:bg-fuchsia-300 selection:text-fuchsia-900">
+        <article className="text-sm pt-36 pb-32 w-full px-4 sm:px-8 md:px-16 lg:px-32 xl:px-44 max-w-[1200px] leading-6 selection:bg-fuchsia-300 selection:text-fuchsia-900">
             {content}
         </article>
     );
