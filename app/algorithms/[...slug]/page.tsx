@@ -67,7 +67,7 @@ export default async function AlgorithmsPage({ params }: { params: { slug: strin
     });
 
     return (
-        <article className="text-sm pt-36 pb-32 w-full px-4 sm:px-8 md:px-16 lg:px-32 xl:px-44 max-w-[1200px] leading-6 selection:bg-fuchsia-300 selection:text-fuchsia-900">
+        <article className="w-full max-w-2xl leading-6 selection:bg-fuchsia-300 selection:text-fuchsia-900">
             {content}
         </article>
     );
