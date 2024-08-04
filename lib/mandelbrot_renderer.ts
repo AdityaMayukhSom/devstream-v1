@@ -5,9 +5,9 @@ import type { MandelbrotWorkerInjectPayload, MandelbrotWorkerReturnPayload } fro
 
 class MandelbrotRenderer {
     private static readonly PIXEL_SKIP_SIZE = 5;
-    private static readonly PIXEL_CLUSTER_SIZE = 2;
+    private static readonly PIXEL_CLUSTER_SIZE = 3;
     private static readonly OFFSET_MULTIPLIER = 0;
-    private static readonly NUM_WORKERS = 70;
+    private static readonly NUM_WORKERS = 32;
 
     private static readonly FOREGROUND_COLOR_HEX = "#000000";
     private static readonly BACKGROUND_COLOR_HEX = Colors.random24BitColor(); // '#fda403'

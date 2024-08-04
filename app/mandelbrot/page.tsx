@@ -7,7 +7,7 @@ const MandelbrotPage = () => {
     const dimention = useWindowDimention();
 
     return (
-        <main>
+        <main className="bg-white min-h-svh">
             <Mandelbrot dimention={dimention} />
         </main>
     );
