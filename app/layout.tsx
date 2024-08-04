@@ -10,9 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+    const singleWhiteSpace = " ";
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className + singleWhiteSpace + "min-h-svh bg-dark-base text-white"}>{children}</body>
         </html>
     );
 }
