@@ -13,11 +13,10 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import rehypeHighlightCodeLines from "rehype-highlight-code-lines";
 
 import { useMDXComponents } from "@/mdx-components";
+import { CONTENT_SRC_PATH } from "@lib/constants";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
-
-const CONTENT_SRC_PATH = "app/algorithms/contents";
 
 export function generateStaticParams() {
     const targets = fs.readdirSync(path.join(process.cwd(), CONTENT_SRC_PATH), {
