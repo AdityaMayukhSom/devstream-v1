@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 
 import remarkGfm from "remark-gfm";
-import rehypeSanitize from "rehype-sanitize";
 import rehypeHighlight from "rehype-highlight";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
@@ -60,7 +59,7 @@ export default async function AlgorithmsPage({ params }: { params: { slug: strin
         options: {
             mdxOptions: {
                 remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
-                rehypePlugins: [rehypeSanitize, rehypeHighlight, rehypeHighlightCodeLines],
+                rehypePlugins: [rehypeHighlight, rehypeHighlightCodeLines],
             },
             parseFrontmatter: true,
         },
