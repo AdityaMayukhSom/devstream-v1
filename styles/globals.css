@@ -1,32 +1,6 @@
 @import url("./highlight.css");
 
 @tailwind base;
-
-@layer base {
-    pre:has(.hljs),
-    pre {
-        padding: 1rem;
-        line-height: 1;
-    }
-
-    code,
-    code * {
-        font-family: monospace;
-        font-size: 0.9rem;
-    }
-
-    code > [data-line-number]::before {
-        content: attr(data-line-number);
-
-        /* Other styling */
-        display: inline-block;
-        width: 1rem;
-        margin-right: 1rem;
-        text-align: right;
-        color: gray;
-    }
-}
-
 @tailwind components;
 @tailwind utilities;
 
