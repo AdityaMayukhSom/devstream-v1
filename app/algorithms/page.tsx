@@ -1,16 +1,23 @@
-const AlgorithmsListPage = async () => {
-    let fileList: string[] = [];
-    try {
-        const resp = await fetch("http://localhost:3000/api/algorithms", { cache: "force-cache" });
-        const data = await resp.json();
-        fileList = data.fileList;
-    } catch (e) {
-        console.log(e);
-    }
+import fs from "node:fs";
+import path from "node:path";
+import React from "react";
+import NextPageProps from "@lib/next_page_props";
+import { CONTENT_SRC_PATH } from "@lib/constants";
 
-    // const fileList: string[] = data.fileList;
+export const runtime = "nodejs";
 
-    return <pre>{fileList}</pre>;
+const AlgorithmsListPage: React.FC<NextPageProps> = () => {
+    const articlesDirectory = path.join(process.cwd(), CONTENT_SRC_PATH);
+    const fileNames = fs.readdirSync(articlesDirectory);
+    const fileList = fileNames.map((fileName) => fileName.replace(/\.mdx$/, ""));
+
+    return (
+        <section>
+            {fileList.map((file) => (
+                <pre key={`article-file-${file}`}>{file}</pre>
+            ))}
+        </section>
+    );
 };
 
 export default AlgorithmsListPage;
