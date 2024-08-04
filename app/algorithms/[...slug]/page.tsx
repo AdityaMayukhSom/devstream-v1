@@ -33,7 +33,8 @@ export function generateStaticParams() {
         }
     }
 
-    return files.map((file) => file.toString().replace(".mdx", "").split("/"));
+    const params = files.map((file) => file.toString().replace(".mdx", "").split("/"));
+    return params;
 }
 
 export const metadata: Metadata = {};
@@ -41,6 +42,7 @@ export const metadata: Metadata = {};
 export default async function AlgorithmsPage({ params }: { params: { slug: string[] } }) {
     const components = useMDXComponents({});
     const sourcePath = path.join(process.cwd(), CONTENT_SRC_PATH, params.slug.join("/")) + ".mdx";
+
     if (!fs.existsSync(sourcePath)) {
         notFound();
     }
@@ -65,19 +67,21 @@ export default async function AlgorithmsPage({ params }: { params: { slug: strin
         components,
     });
 
+    const articleTitle = frontmatter.title as string;
+
     return (
         <>
-            <header className="pt-16 pb-8 px-8 sm:px-12 md:px-16 lg:px-32 xl:px-52">
-                <a href="/algorithms" className="font-medium underline underline-offset-4">
-                    Go Home
-                </a>
+            <header className="px-4 pt-4 pb-0 lg:pb-20 font-medium text-xs flex items-center">
+                <a href="/algorithms">Algorithms</a>
+                &nbsp;&gt;&nbsp;
+                <p>{articleTitle}</p>
             </header>
-            <main className="pt-16 pb-8 px-8 sm:px-12 md:px-16 lg:px-32 xl:px-52">
+            <main className="pt-16 pb-8 px-8 sm:px-12 md:px-20 lg:px-32 xl:px-52">
                 <article className="w-full max-w-2xl leading-6 selection:bg-fuchsia-300 selection:text-fuchsia-900">
                     {content}
                 </article>
             </main>
-            <footer className="px-8 sm:px-12 md:px-16 lg:px-32 xl:px-52 mt-8">
+            <footer className="px-8 sm:px-12 md:px-20 lg:px-32 xl:px-52 mt-8">
                 <div className="border-t border-gray-700 py-6">Team Devstream.</div>
             </footer>
         </>
