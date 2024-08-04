@@ -66,8 +66,20 @@ export default async function AlgorithmsPage({ params }: { params: { slug: strin
     });
 
     return (
-        <article className="w-full max-w-2xl leading-6 selection:bg-fuchsia-300 selection:text-fuchsia-900">
-            {content}
-        </article>
+        <>
+            <header className="pt-16 pb-8 px-8 sm:px-12 md:px-16 lg:px-32 xl:px-52">
+                <a href="/algorithms" className="font-medium underline underline-offset-4">
+                    Go Home
+                </a>
+            </header>
+            <main className="pt-16 pb-8 px-8 sm:px-12 md:px-16 lg:px-32 xl:px-52">
+                <article className="w-full max-w-2xl leading-6 selection:bg-fuchsia-300 selection:text-fuchsia-900">
+                    {content}
+                </article>
+            </main>
+            <footer className="px-8 sm:px-12 md:px-16 lg:px-32 xl:px-52 mt-8">
+                <div className="border-t border-gray-700 py-6">Team Devstream.</div>
+            </footer>
+        </>
     );
 }
