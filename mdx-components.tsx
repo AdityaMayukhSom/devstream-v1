@@ -4,6 +4,7 @@ import Link from "next/link";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     const singleWhiteSpace = " ";
     const svgColor = "#d1d5db";
+
     return {
         ul: ({ children }) => <ul className="pb-4">{children}</ul>,
         li: ({ children }) => (
@@ -16,11 +17,26 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 {children}
             </p>
         ),
-        h1: ({ children }) => (
-            <h1 className="text-4xl font-semibold py-4 mb-4 selection:bg-sky-200 selection:text-sky-900">{children}</h1>
+        h1: ({ children, ...rest }) => (
+            <h1 className="text-4xl font-semibold py-4 mb-4 selection:bg-sky-200 selection:text-sky-900" {...rest}>
+                {children}
+            </h1>
         ),
-        h2: ({ children }) => <h2 className="text-[32px] font-semibold pb-5 pt-3">{children}</h2>,
-        h3: ({ children }) => <h3 className="text-xl font-semibold pb-3 pt-1">{children}</h3>,
+        h2: ({ children, ...rest }) => (
+            <h2 className="text-[32px] font-semibold pb-5 pt-3" {...rest}>
+                {children}
+            </h2>
+        ),
+        h3: ({ children, ...rest }) => (
+            <h3 className="text-xl font-semibold pb-3 pt-1" {...rest}>
+                {children}
+            </h3>
+        ),
+        h4: ({ children, ...rest }) => (
+            <h4 className="text-base font-medium pb-3 pt-1" {...rest}>
+                {children}
+            </h4>
+        ),
         pre: ({ children, ...rest }) => (
             <pre
                 className="p-3 mb-5 rounded-sm leading-none *:selection:bg-emerald-200 *:selection:text-emerald-900 overflow-hidden"
