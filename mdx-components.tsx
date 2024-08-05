@@ -106,6 +106,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 {children}
             </blockquote>
         ),
+        Experience: (props) => <Experience {...props} />,
         ...components,
     };
 }
