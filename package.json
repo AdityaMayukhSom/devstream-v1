@@ -62,7 +62,6 @@
             "no-compare-neg-zero": "error",
             "no-empty-pattern": "error",
             "no-unsafe-finally": "error",
-            "arrow-body-style": "error",
             "block-scoped-var": "error",
             "consistent-return": "error",
             "default-case": "error",
