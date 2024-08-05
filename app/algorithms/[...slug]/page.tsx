@@ -12,7 +12,7 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import rehypeHighlightCodeLines from "rehype-highlight-code-lines";
 
 import { useMDXComponents } from "@/mdx-components";
-import { CONTENT_SRC_PATH } from "@lib/constants";
+import { CONTENT_SRC_PATH, CONTENT_FILE_EXT } from "@lib/constants";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
@@ -32,7 +32,7 @@ export function generateStaticParams() {
         }
     }
 
-    const params = files.map((file) => file.toString().replace(".mdx", "").split("/"));
+    const params = files.map((file) => file.toString().replace(CONTENT_FILE_EXT, "").split("/"));
     return params;
 }
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {};
 
 export default async function AlgorithmsPage({ params }: { params: { slug: string[] } }) {
     const components = useMDXComponents({});
-    const sourcePath = path.join(process.cwd(), CONTENT_SRC_PATH, params.slug.join("/")) + ".mdx";
+    const sourcePath = path.join(process.cwd(), CONTENT_SRC_PATH, params.slug.join("/")) + CONTENT_FILE_EXT;
 
     if (!fs.existsSync(sourcePath)) {
         notFound();
