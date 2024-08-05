@@ -13,7 +13,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     const singleWhiteSpace = " ";
     return (
         <html lang="en">
-            <body className={inter.className + singleWhiteSpace + "min-h-svh bg-dark-base text-white"}>{children}</body>
+            <body className={inter.className + singleWhiteSpace + "min-h-svh bg-dark-base text-white scroll-smooth"}>
+                {children}
+            </body>
         </html>
     );
 }
