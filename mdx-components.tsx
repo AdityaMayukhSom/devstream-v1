@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
+import Experience from "@components/creator/experience";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     const singleWhiteSpace = " ";
