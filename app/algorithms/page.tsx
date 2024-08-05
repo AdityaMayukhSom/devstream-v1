@@ -40,7 +40,7 @@ const AlgorithmsListPage: React.FC<NextPageProps> = () => {
         const fullPath = path.join(articlesDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, { encoding: "utf-8" });
         const matterResult = matter(fileContents);
-        const articleTitle: string = matterResult.data["title"] ?? "title not found";
+        const articleTitle: string = matterResult.data.title ?? "title not found";
         const articlePublishedOn: string = matterResult.data["published-on"] ?? new Date().toDateString();
         const articleDetails: ArticleDetails = {
             name: articleName,
