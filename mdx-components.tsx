@@ -8,8 +8,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
         ul: ({ children }) => <ul className="pb-4">{children}</ul>,
         li: ({ children }) => (
-            <li className="grid grid-cols-[auto_1fr] before:content-['—'] before:leading-snug before:text-yellow-400 before:pr-4">
-                <div>{children}</div>
+            <li className="grid grid-cols-[auto_1fr] before:content-['—'] before:leading-snug w-full before:text-yellow-400 before:pr-4">
+                <div className="w-full">{children}</div>
             </li>
         ),
         p: ({ children, ...rest }) => (
