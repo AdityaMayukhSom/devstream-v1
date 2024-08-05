@@ -78,7 +78,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 className={
                     (className ?? "") +
                     singleWhiteSpace +
-                    "font-monospace-only *:leading-none [&:not(.hljs)]:text-yellow-300 line-number:content-[attr(data-line-number)] line-number:inline-block line-number:w-5 line-number:mr-4 line-number:text-right line-number:text-gray-500 line-number:leading-none"
+                    "font-monospace-only *:leading-none [&:not(.hljs)]:text-yellow-400 line-number:content-[attr(data-line-number)] line-number:inline-block line-number:w-5 line-number:mr-4 line-number:text-right line-number:text-gray-500 line-number:leading-none"
                 }
                 {...rest}
             >
