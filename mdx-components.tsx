@@ -88,6 +88,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         a: ({ children, href, ...rest }) => (
             <Link
                 href={href ?? "#"}
+                target="_blank"
                 className="border-spacing-1 border-b-2 transition-all ease-in-out duration-150 border-gray-500 hover:border-gray-100"
                 {...rest}
             >
