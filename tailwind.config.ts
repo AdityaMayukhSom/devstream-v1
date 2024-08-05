@@ -44,6 +44,14 @@ const config: Config = {
                     "-o-user-drag": "none",
                     "user-drag": "none",
                 },
+
+                // ".polca-dotted":{
+                //     "--dot-empty": calc(var(--dot-space) - var(--dot-size));
+                //     "--gradient-start": linear-gradient(90deg, var(--background-color) var(--dot-empty), transparent 1%) center;
+                //     "--gradient-end": linear-gradient(var(--background-color) var(--dot-empty), transparent 1%) center;
+                //     "background": var(--gradient-start), var(--gradient-end), var(--dot-color);
+                //     "background-size": var(--dot-space) var(--dot-space);
+                // }
             });
         }),
     ],
