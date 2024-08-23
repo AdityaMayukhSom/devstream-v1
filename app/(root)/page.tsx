@@ -1,10 +1,9 @@
-import React from "react";
-import Analytics from "./analytics";
-import Cards from "./cards";
-import Footer from "./footer";
-import Hero from "./hero";
 import Navbar from "./navbar";
-import Newsletter from "./newsletter";
+import Hero from "./hero";
+import Analytics from "./analytics";
+import Footer from "./footer";
+// import Cards from "./cards";
+// import Newsletter from "./newsletter";
 
 const Home = () => {
     return (
