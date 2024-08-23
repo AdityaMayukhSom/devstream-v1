@@ -26,7 +26,6 @@ const footerData = [
             { name: "About", link: "#" },
             { name: "Blog", link: "#" },
             { name: "Jobs", link: "#" },
-            { name: "Press", link: "#" },
             { name: "Careers", link: "#" },
         ],
     },
