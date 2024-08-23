@@ -17,6 +17,9 @@ const config: Config = {
             backgroundColor: {
                 "dark-base": "rgb(21,21,21)",
                 "contrasting-base": "#141618",
+                "tealish-blue": "#003DF6",
+                "nearly-black": "#010409",
+                "mint-green": "#00df9a"
             },
             fontFamily: {
                 "monospace-only": "monospace",
