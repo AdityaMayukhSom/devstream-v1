@@ -12,7 +12,7 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import rehypeHighlightCodeLines from "rehype-highlight-code-lines";
 
 import { useMDXComponents } from "@/mdx-components";
-import { CONTENT_SRC_PATH, CONTENT_FILE_EXT } from "@lib/constants";
+import { CONTENT_SRC_PATH, CONTENT_FILE_EXT, CONTENT_ROUTE } from "@lib/constants";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
@@ -71,7 +71,7 @@ export default async function AlgorithmsPage({ params }: { params: { slug: strin
     return (
         <>
             <header className="px-4 pt-4 pb-0 lg:pb-20 font-medium text-xs flex items-center">
-                <a href="/algorithms">Algorithms</a>
+                <a href={CONTENT_ROUTE}>Blogs</a>
                 &nbsp;&gt;&nbsp;
                 <p>{articleTitle}</p>
             </header>

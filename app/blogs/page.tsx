@@ -5,7 +5,7 @@ import React from "react";
 import matter from "gray-matter";
 
 import NextPageProps from "@lib/next_page_props";
-import { CONTENT_SRC_PATH } from "@lib/constants";
+import { CONTENT_SRC_PATH, CONTENT_ROUTE } from "@lib/constants";
 import Link from "next/link";
 
 export const runtime = "nodejs";
@@ -18,7 +18,7 @@ interface ArticleDetails {
 }
 
 const AlgorithmListItem = (articleDetails: ArticleDetails) => {
-    const articleUrl = `/algorithms/${articleDetails.name}`;
+    const articleUrl = `${CONTENT_ROUTE}/${articleDetails.name}`;
     return (
         <section key={`article-file-${articleDetails.name}`} className="w-full flex justify-between">
             <Link
