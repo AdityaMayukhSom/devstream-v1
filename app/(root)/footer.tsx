@@ -23,7 +23,7 @@ const footerData = [
     {
         name: "Company",
         items: [
-            { name: "About", link: "#" },
+            { name: "About", link: "#what-we-do" },
             { name: "Blog", link: "#" },
             { name: "Jobs", link: "#" },
             { name: "Careers", link: "#" },
@@ -33,10 +33,10 @@ const footerData = [
 
 const Footer = () => {
     return (
-        <footer className="py-16 grid lg:grid-cols-4 pb-48 pl-24 gap-8 text-gray-300 border-t border-gray-400/15">
+        <footer className="pt-24 grid lg:grid-cols-4 pb-60 pl-24 gap-8 text-gray-300 border-t bg-landing-page-base border-gray-400/15">
             {footerData.map((data) => (
                 <div key={`footer-item-name-${data.name}`}>
-                    <h6 className="font-medium text-gray-400">{data.name}</h6>
+                    <h5 className="font-medium text-gray-400">{data.name}</h5>
                     <ul className="text-lg flex flex-col gap-y-1 pt-4">
                         {data.items.map((item) => (
                             <li key={`footer-item-list-item-${data.name}-${item.name}`}>

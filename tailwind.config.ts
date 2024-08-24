@@ -16,16 +16,25 @@ const config: Config = {
             },
             backgroundColor: {
                 "dark-base": "rgb(21,21,21)",
+                "landing-page-base": "#121212",
                 "contrasting-base": "#141618",
                 "tealish-blue": "#003DF6",
-                "nearly-black": "#010409",
-                "mint-green": "#00df9a"
+                "algae-green": "#CEFF6C",
+                "baby-pink":"#E699A6",
+                "mint-green": "#00df9a",
+                "olive-green": "#556B2F",
+                "sunshine-yelow": "#FB8B24",
             },
             fontFamily: {
                 "monospace-only": "monospace",
             },
             lineHeight: {
                 "4.5": "1.125rem",
+            },
+            textColor: {
+                "woodish-brown": "#040F0F",
+                "creamy-peach": "#FFDAB9",
+                "sunshine-yelow": "#FB8B24",
             },
         },
     },

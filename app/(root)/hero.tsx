@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <section className="text-white min-h-screen pl-24 pb-16 pt-48 text-4xl">
+        <section className="min-h-screen pl-24 pb-16 pt-48 text-4xl sticky top-0 bg-landing-page-base">
             <p className="pb-10 leading-tight">
                 We are team Devstream Inc.,
                 <br />a software development firm driven by
