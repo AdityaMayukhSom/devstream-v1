@@ -12,7 +12,7 @@ const Analytics = ({ dark = false, sticky = true, ...props }: React.PropsWithChi
     return (
         <section
             className={
-                (dark ? "bg-landing-page-base text-white/[0.87]" : "bg-baby-pink text-gray-900/90") +
+                (dark ? "bg-landing-page-base text-white/[0.87]" : "bg-baby-pink text-gray-900/[0.95]") +
                 singleWhiteSpace +
                 (sticky ? "sticky top-0" : "") +
                 singleWhiteSpace +
