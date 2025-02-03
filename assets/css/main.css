@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Inter", sans-serif;
+  --font-satoshi: "Satoshi";
+  --font-monospace-only: "Ubuntu Mono";
+  --font-consolas-only: Consolas;
+  --text-three-and-half-xl: 32px;
+  --leading-four-and-half: 1.125rem;
+  --color-dark-base: rgb(21, 21, 21);
+  --color-landing-page-base: #121212;
+  --color-contrasting-base: #141618;
+  --color-tealish-blue: #003df6;
+  --color-algae-green: #ceff6c;
+  --color-baby-pink: #e699a6;
+  --color-mint-green: #00df9a;
+  --color-olive-green: #556b2f;
+  --color-sunshine-yelow: #fb8b24;
+  --color-woodish-brown: #040f0f;
+  --color-creamy-peach: #ffdab9;
+  --color-sunshine-yelow: #fb8b24;
+  --color-baby-pink: #e699a6;
+  --color-code-snippet-backgroung: rgb(34, 39, 46);
+}
+
+@custom-variant line-number (&>[line]::before);

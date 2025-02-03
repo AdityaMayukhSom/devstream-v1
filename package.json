@@ -1,73 +1,26 @@
 {
-    "name": "devstream",
-    "version": "0.1.0",
-    "private": true,
-    "packageManager": "pnpm@9.6.0",
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "prepare": "husky || 1" 
-    },
-    "dependencies": {
-        "@mdx-js/loader": "^3.0.1",
-        "@mdx-js/react": "^3.0.1",
-        "@next/mdx": "^14.2.7",
-        "gray-matter": "^4.0.3",
-        "next": "^14.2.7",
-        "next-mdx-remote": "^5.0.0",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "rehype-highlight": "^7.0.0",
-        "rehype-highlight-code-lines": "^1.0.4",
-        "remark-frontmatter": "^5.0.0",
-        "remark-gfm": "^4.0.0",
-        "remark-mdx-frontmatter": "^5.0.0"
-    },
-    "devDependencies": {
-        "@tailwindcss/typography": "^0.5.15",
-        "@types/mdx": "^2.0.13",
-        "@types/node": "^20.16.2",
-        "@types/react": "^18.3.4",
-        "@types/react-dom": "^18.3.0",
-        "autoprefixer": "^10.4.20",
-        "eslint": "^8.57.0",
-        "eslint-config-next": "14.2.5",
-        "husky": "^9.1.5",
-        "postcss": "^8.4.41",
-        "postcss-load-config": "^6.0.1",
-        "tailwindcss": "^3.4.10",
-        "typescript": "^5.5.4"
-    },
-    "prettier": {
-        "semi": true,
-        "bracketSpacing": true,
-        "trailingComma": "all",
-        "singleQuote": false,
-        "printWidth": 120,
-        "tabWidth": 4,
-        "useTabs": false,
-        "endOfLine": "auto"
-    },
-    "eslintConfig": {
-        "extends": "next/core-web-vitals",
-        "rules": {
-            "no-var": "error",
-            "prefer-arrow-callback": "error",
-            "semi": "error",
-            "semi-style": "error",
-            "prefer-const": "error",
-            "no-unused-vars": "warn",
-            "array-callback-return": "error",
-            "no-class-assign": "error",
-            "no-compare-neg-zero": "error",
-            "no-empty-pattern": "error",
-            "no-unsafe-finally": "error",
-            "block-scoped-var": "error",
-            "consistent-return": "error",
-            "default-case": "error",
-            "dot-notation": "warn"
-        }
-    }
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@nuxt/content": "^3.0.1",
+    "@nuxt/eslint": "1.0.0-rc.1",
+    "@nuxt/fonts": "0.10.3",
+    "@tailwindcss/vite": "^4.0.0",
+    "eslint": "^9.0.0",
+    "gsap": "^3.12.7",
+    "nuxt": "^3.15.3",
+    "tailwindcss": "^4.0.0",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "packageManager": "pnpm@9.13.2+sha512.88c9c3864450350e65a33587ab801acf946d7c814ed1134da4a924f6df5a2120fd36b46aab68f7cd1d413149112d53c7db3a4136624cfd00ff1846a0c6cef48a"
 }
